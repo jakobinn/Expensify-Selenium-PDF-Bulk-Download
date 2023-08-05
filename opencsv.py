@@ -23,7 +23,7 @@ def handleReceiptData(data = []):
 def fixAMDate (date = ""):
     # convert it into datetime object
     if(date != ""):
-        dt_obj = datetime.strptime(old_date, '%d-%m-%Y')
+        dt_obj = datetime.strptime(date, '%d-%m-%Y')
         return dt_obj.strftime('%Y-%m-%d')
     else:
         return ""
