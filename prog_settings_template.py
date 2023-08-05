@@ -1,0 +1,6 @@
+# RENAME THIS FILE TO prog_settings.py AND FILL IN THE VARIABLES BELOW
+PROGRAM_DIR = "C:\\..."
+PATH_URL = "C:\\..."
+DATE_FROM = "" # Format: DD-MM-YYYY
+DATE_TO = "" # Format: DD-MM-YYYY
+USERNAME = ""
