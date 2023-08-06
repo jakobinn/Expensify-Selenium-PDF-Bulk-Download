@@ -4,8 +4,14 @@
 
 ### To use, you need to do the following
 
-1. Download Selenium Chrome driver
+1. Download Selenium Chrome driver.
 2. Install relevant packages with pip (seen in the import statements in opencsv.py and getpdfs.py)
+* webdriver-manager 
+* urllib3
+* selenium
+* requests
+* pandas
+* numpy
 3. Update prog_settings_template with relevant values and change the name to prog_settings.py.
 4. Make sure the default.csv template in Expensify has not been changed.
 5. Run it. :)
