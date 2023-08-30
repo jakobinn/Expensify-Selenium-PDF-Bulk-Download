@@ -43,16 +43,21 @@ def getName(line = []):
     return nameTemp
 
 def getPrice(line = []):
+    price = None
     priceTemp = line[2]
-    if priceTemp and priceTemp.endswith('.00'):
+    if priceTemp is not None and priceTemp.endswith('.00'):
         price = priceTemp[:-3]
-        price = price.replace(',', '')
-        price = price.replace('.', '')
-        return price
+        print("price ", price)
+        if(price is not None):
+            price = price.replace(',', '')
+            price = price.replace('.', '')
+            return price
     else:
-        price = price.replace(',', '')
-        price = price.replace('.', '')
-        return priceTemp
+        if(price is not None):
+            price = price.replace(',', '')
+            price = price.replace('.', '')
+            return priceTemp
+    return ""
 
 def getCurrency(line = []):
     nameTemp = line[8]

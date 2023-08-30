@@ -9,6 +9,8 @@ import opencsv
 import prog_settings
 import os
 import urllib.request
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 ### INITIALIZATION ###
 
@@ -43,24 +45,30 @@ time.sleep(0.2)
 nextButton = driver.find_element(By.ID, "js_click_submitLogin")
 nextButton.click()
 
-time.sleep(20)
+time.sleep(120)
 
 ### GETTING THE DEFAULT CSV FILE ###
 
-startDate = driver.find_element(By.ID, "startDate")
-startDate.send_keys("2023-07-25")
+# startDate = driver.find_element(By.ID, "startDate")
+# startDate.send_keys(prog_settings.DATE_FROM)
 
-endDate = driver.find_element(By.ID, "endDate")
-endDate.send_keys("2023-07-31")
+# endDate = driver.find_element(By.ID, "endDate")
+# endDate.send_keys(prog_settings.DATE_TO)
 
-selectAllCheckbox = driver.find_element(By.ID, "selectAllExpenses")
-selectAllCheckbox.click()
+# selectAllCheckbox = driver.find_element(By.ID, "selectAllExpenses")
+# selectAllCheckbox.click()
 
-csvFile = driver.find_element_by_xpath('//a[@role="button" and @tabindex="-1" and @data-toggle="tooltip"]')
-csvFile.click()
+# time.sleep(1)
+# wait = WebDriverWait(driver, 10)
+# csvFile = wait.until(EC.element_to_be_clickable((By.XPATH, '//a[@role="button" and @tabindex="-1" and @data-toggle="tooltip"]')))
+# # csvFile = driver.find_element_by_xpath('//a[@role="button" and @tabindex="-1" and @data-toggle="tooltip"]')
+# time.sleep(1)
+# csvFile.click()
 
-receipts = opencsv.getReceiptData("Bulk_Expense_Export.csv")
-print(receipts)
+# time.sleep(9)
+
+# receipts = opencsv.getReceiptData("Bulk_Expense_Export.csv")
+# print(receipts)
 
 ### DOWNLOADING THE PDF FILES INTO A FOLDER OF YOUR CHOICE ###
 

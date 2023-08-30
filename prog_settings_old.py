@@ -1,0 +1,5 @@
+PROGRAM_DIR = "C:\\Code\\Automated"
+PATH_URL = "C:\\Users\\Notandi\\OneDrive\\Business and Finance\\Torio - Company\\Bookkeeping\\2023\\July_and_August\\"
+DATE_FROM = "25-07-2023"
+DATE_TO = "31-07-2023"
+USERNAME = "billing@torio.is"
